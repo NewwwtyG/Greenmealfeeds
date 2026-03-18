@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Order Feed</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Order Feed</h2>
+
+<input id="name" placeholder="Your Name"><br><br> <input id="product" placeholder="Feed Type"><br><br> <input id="qty" placeholder="Quantity"><br><br>
+
+<button onclick="sendOrder()">Send via WhatsApp</button>
+
+<script>
+function sendOrder(){
+let name=document.getElementById("name").value;
+let product=document.getElementById("product").value;
+let qty=document.getElementById("qty").value;
+
+let msg="Hello Greenmeal Feeds, I am "+name+
+". I want "+qty+" of "+product;
+
+window.open("https://wa.me/254719618578?text="+encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
