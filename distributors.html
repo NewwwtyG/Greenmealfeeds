@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Agrovets</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+
+<h2>Find Agrovet</h2>
+<div id="map" style="height:500px;"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+var map=L.map('map').setView([0.3546,37.5822],7);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+.addTo(map);
+
+L.marker([0.3546,37.5822])
+.addTo(map)
+.bindPopup("Isiolo Agrovet");
+</script>
+
+</body>
+</html>
